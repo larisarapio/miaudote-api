@@ -1,0 +1,19 @@
+{
+  "name": "miaudote-api",
+  "version": "1.0.0",
+  "description": "> Este projeto foi idealizado a partir da crescente preocupação com a quantidade de gatos abandonados e sem um lar. O objetivo é criar uma plataforma onde administradores possam cadastrar gatos que precisam de um lar, permitindo que potenciais adotantes visualizem as informações dos animais e possam realizar a adoção de forma simples e eficiente. A plataforma visa contribuir para a redução do número de gatos abandonados, promovendo o encontro entre gatos necessitados de cuidados e pessoas dispostas a oferecer um novo lar e carinho.\r >",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.21.1",
+    "uuid": "11.0.3"
+  }
+}
