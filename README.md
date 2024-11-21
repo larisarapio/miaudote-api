@@ -17,6 +17,7 @@
     - Um gato só pode ser listado como "adotado" se tiver um adotante associado.
     - Não é permitido excluir um gato já adotado.
 - Casos de uso
+  
     ![image](https://github.com/user-attachments/assets/b9bd6f67-bc72-435f-993b-5b663393c285)
 
 - Diagrama de sequência
