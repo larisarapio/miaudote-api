@@ -1,11 +1,12 @@
 const express = require("express")
 const app = express()
 const port = 3333
+const catRoutes = require("./routes/catRoutes")
+const userRoutes = require("./routes/userRoutes")
 
 app.use(express.json())
 
-const catRoutes = require("./routes/catRoutes")
-app.use(catRoutes)
+app.use(catRoutes, userRoutes)
 
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`)

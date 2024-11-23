@@ -31,10 +31,10 @@ function editCat(request, response) {
 
     }
 
-    if (request.body.name !== undefined) searchCat.name = request.body.name;
-    if (request.body.age !== undefined) searchCat.age = request.body.age;
-    if (request.body.breed !== undefined) searchCat.breed = request.body.breed;
-    if (request.body.adopted !== undefined) searchCat.adopted = request.body.adopted;
+    if (request.body.name !== undefined) searchCat.name = request.body.name
+    if (request.body.age !== undefined) searchCat.age = request.body.age
+    if (request.body.breed !== undefined) searchCat.breed = request.body.breed
+    if (request.body.adopted !== undefined) searchCat.adopted = request.body.adopted
 
     response.status(200).json(searchCat)
 }
@@ -43,14 +43,26 @@ function deleteCat(request, response) {
     const idCat = request.params.id
     const index = cats.findIndex(cat => cat.id === idCat)
 
-    if (index === -1) {
-        return response.status(404).json({ error: 'Gato não encontrado' })
-    }
-
     const deletedCat = cats.splice(index, 1)
 
     response.status(200).json(deletedCat[0])
 
 }
 
-module.exports = { listCats, addCat, editCat, deleteCat }
+function adoptCat(request, response) {
+    const { userId } = request.body
+    const idCat = request.params.id
+
+    const cat = cats.find((c) => c.id === idCat)
+
+    if (!userId) {
+        return response.status(400).json({ error: "Usuário inexistente. Para adotar um gato, é necessário ser um usuário cadastrado na plataforma." })
+    }
+
+    cat.adopted = true
+    cat.adoptedBy = userId
+
+    return response.status(200).json({ message: "Gato adotado com sucesso!", cat })
+}
+
+module.exports = { listCats, addCat, editCat, deleteCat, adoptCat }

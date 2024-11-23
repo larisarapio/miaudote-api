@@ -1,4 +1,4 @@
-const { v4: uuidv4 } = require("uuid");
+const { v4: uuidv4 } = require("uuid")
 
 const cats = [
     {
@@ -6,7 +6,8 @@ const cats = [
         name: "Luna",
         age: 2,
         breed: "não definido",
-        adopted: true,
+        adopted: false,
+        adoptedBy: null,
         createdAt: "11/08/2024",
     },
     {
@@ -15,8 +16,9 @@ const cats = [
         age: 4,
         breed: "não definido",
         adopted: false,
+        adoptedBy: null,
         createdAt: "11/08/2024",
     },
-];
+]
 
-module.exports = cats;
+module.exports = cats
