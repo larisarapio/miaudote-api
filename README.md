@@ -31,14 +31,14 @@
         - 1a versão
             - [x]  CRUD mockado
             - [x]  ajustar arquitetura
-            - [ ]  implementar regra de negócio
+            - [x]  implementar regra de negócio
         - 2a versão
+            - [ ]  implementar autentificação JWT
             - [ ]  implementação banco de dados
-            - [ ]  testes
     
     - FRONTEND
         - 1a versão
             - [x]  montar design
-            - [ ]  passar pro código
+            - [ ]  passar pro código o que foi determinado o figma
             - [ ]  integração
             - [ ]  QA
