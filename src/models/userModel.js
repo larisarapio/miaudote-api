@@ -1,5 +1,5 @@
-const { v4 } = require("uuid")
 const { v4: uuidv4 } = require("uuid")
+const Role = require("../domain/roleEnum")
 
 const users = [
     {
@@ -7,7 +7,7 @@ const users = [
         name: "Larissa",
         email: "larissa@gmail.com",
         password: "1234",
-        role: "admin",
+        role: Role.ADMIN,
         createdAt: "",
         updatedAt: ""
     },
@@ -16,7 +16,7 @@ const users = [
         name: "Pedro",
         email: "pedro@gmail.com",
         password: "4321",
-        role: "user",
+        role: Role.USER,
         createdAt: "",
         updatedAt: ""
     },
